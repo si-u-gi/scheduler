@@ -1,0 +1,70 @@
+{
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-17",
+      "path": "/usr/lib/jvm/java-17-openjdk-amd64",
+      "default": true
+    }
+  ],
+  "java.import.gradle.java.home": "/usr/lib/jvm/java-17-openjdk-amd64",
+  "java.import.gradle.enabled": true,
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.project.sourcePaths": ["src/main/java"],
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -XX:+UseStringDeduplication -Xlog:disable -Xms256m -Xmx2048m",
+
+  // Format
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.defaultFormatter": "redhat.java",
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    }
+  },
+
+  // ESLint
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+
+  // Markdown
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on"
+  },
+
+  // Files
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "files.associations": {
+    "*.md": "markdown"
+  },
+
+  // Spring Boot Dashboard
+  "spring-boot.launcher.config": {
+    "port": 8080
+  },
+
+  // Docker
+  "docker.dockerPath": "docker",
+
+  // REST Client
+  "rest-client.environmentVariables": {
+    "local": {
+      "baseUrl": "http://localhost:8080/api/v1"
+    }
+  }
+}

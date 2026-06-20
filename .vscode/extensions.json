@@ -1,0 +1,46 @@
+{
+  "recommendations": [
+    // Java / Spring Boot
+    "vscjava.vscode-java-pack",
+    "vmware.vscode-spring-boot",
+    "redhat.java",
+    "vscjava.vscode-java-debug",
+    "vscjava.vscode-java-test",
+    "vscjava.vscode-maven",
+    "vscjava.vscode-spring-boot-dashboard",
+    "vscjava.vscode-spring-boot-properties-schema",
+
+    // Lombok
+    "gabrielbb.vscode-lombok",
+
+    // API / HTTP
+    "humao.rest-client",
+
+    // Database
+    "mtzaquiza.vscode-postgres",
+    "ckolkman.vas港澳台-postgres-connector",
+
+    // Git
+    "eamodio.gitlens",
+    "GitHub.vscode-pull-request-github",
+
+    // IDE
+    "VisualStudioExptTeam.vscodeintellicode",
+    "formulahendry.auto-rename-tag",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+
+    // Docker
+    "ms-azuretools.vscode-docker",
+
+    // Markdown
+    "yzhang.markdown-all-in-one",
+    "DavidAnson.vscode-markdownlint",
+
+    // YAML
+    "redhat.vscode-yaml",
+
+    // Remote Development (원격 접속)
+    "ms-vscode-remote.vscode-remote-extensionpack"
+  ]
+}
