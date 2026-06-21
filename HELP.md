@@ -6,7 +6,7 @@ DB 실행:
 빌드 및 실행
     ./gradlew clean build
     cd build/libs
-    java -jar marketplace-0.0.1-SNAPSHOT.jar
+    java -jar scheduler-0.0.1-SNAPSHOT.jar
 }
 
 [자바 17 설치 및 적용 방법] {
@@ -68,3 +68,39 @@ DB 실행:
 [스프링 이니셜라이져] {
     spring web, Thymeleaf
 }
+
+
+
+@si-u-gi ➜ /workspaces/scheduler (main) $ sudo -i
+root ➜ /workspaces/scheduler (main) $ su - postgres
+postgres@codespaces-d765fc:/workspaces/scheduler$ psql
+
+3. 프로젝트용 사용자 생성
+
+개발용으로 새로운 사용자를 만드는 것을 추천합니다.
+
+CREATE USER scheduler WITH PASSWORD '1234';
+
+권한 부여
+
+GRANT ALL PRIVILEGES ON DATABASE scheduler TO scheduler;
+
+PostgreSQL 15 이상에서는 추가로
+
+\c scheduler
+GRANT ALL ON SCHEMA public TO scheduler;
+ALTER SCHEMA public OWNER TO scheduler;
+
+마지막으로
+
+\q
+
+6. PostgreSQL 실행 여부
+
+Codespaces에서는
+
+sudo service postgresql start
+
+확인
+
+sudo service postgresql status
