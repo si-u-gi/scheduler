@@ -113,8 +113,8 @@ Week  9-10 │████████████████████│ Ph
 ### 4.2 상세 태스크
 
 #### **Week 1-2: 인증 시스템**
-- [ ] Spring Boot 프로젝트 생성
-- [ ] PostgreSQL 연결 설정
+- [✔️] Spring Boot 프로젝트 생성
+- [✔️] PostgreSQL 연결 설정
 - [ ] JPA Entity 설계 (User, RefreshToken)
 - [ ] 회원가입 API + Validation
 - [ ] 로그인 API + BCrypt
