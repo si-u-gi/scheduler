@@ -227,7 +227,7 @@ refresh_tokens
 
 ## 7. 배울 점 정리
 
-|スキル|배울 내용|
+|기술|배울 내용|
 |------|---------|
 | **PostgreSQL** | Oracle → PostgreSQL 차이 (시퀀스, TEXT 타입, 배열 등) |
 | **JWT** | Access Token + Refresh Token 분리, 블랙리스트 |
