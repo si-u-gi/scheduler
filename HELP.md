@@ -104,3 +104,19 @@ sudo service postgresql start
 확인
 
 sudo service postgresql status
+
+
+7. 키보드로 새 폴더, 새 파일 만들기
+
+Preferences: Open KeyBoard Shortcuts (JSON)
+
+{
+    "key": "cmd+'",
+    "command": "explorer.newFile",
+    "when": "explorerViewletFocus"
+},
+{
+    "key": "shift+cmd+'",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletFocus"
+},

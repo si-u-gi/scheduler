@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Scheduler</title>
+	<style>
+	    * {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		body {
+			background: #0D1117;
+			color: #F0F6FC;
+		}
+
+		header {
+			height: 70px;
+			background: #161B22;
+			border-bottom: 1px solid #30363D;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 60px;
+		}
+
+		.logo {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			font-size: 28px;
+			font-weight: 700;
+			color: #3B82F6;
+		}
+
+		.logo-icon {
+			width: 18px;
+			height: 18px;
+			border-radius: 50%;
+			background: #3B82F6;
+			box-shadow: 0 0 8px #3B82F6, 0 0 18px #3B82F6;
+		}
+
+		nav ul {
+			display: flex;
+			list-style: none;
+			gap: 40px;
+		}
+
+		nav a {
+			color: #C9D1D9;
+			text-decoration: none;
+			font-size: 15px;
+			transition: .3s;
+		}
+
+		nav a:hover {
+			color: #3B82F6;
+		}
+
+		main {
+			height: calc(100vh - 70px);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.hero {
+			text-align: center;
+		}
+
+		.hero h1 {
+			font-size: 65px;
+			margin-bottom: 20px;
+		}
+
+		.hero h1 span {
+			color: #3B82F6;
+		}
+
+		.hero p {
+			color: #8B949E;
+			font-size: 20px;
+			margin-bottom: 45px;
+		}
+
+		.buttons {
+			display: flex;
+			justify-content: center;
+			gap: 20px;
+		}
+
+		.btn {
+			padding: 15px 35px;
+			border-radius: 10px;
+			text-decoration: none;
+			font-size: 16px;
+			font-weight: 700;
+			transition: .3s;
+		}
+
+		.primary {
+			background: #3B82F6;
+			color: #fff;
+		}
+
+		.primary:hover {
+			background: #2563EB;
+		}
+
+		.secondary {
+			border: 1px solid #30363D;
+			color: #F0F6FC;
+		}
+
+		.secondary:hover {
+			background: #21262D;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<div class="logo-icon"></div>
+			Schedular
+		</div>
+
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Calendar</a></li>
+				<li><a href="#">Projects</a></li>
+				<li><a href="#">Login</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section class="hero">
+			<h1>Manage Your <span>Schedule</span></h1>
+			<p>
+				Simple. Fast. Collaborative.
+				<br>
+				Plan everything in one place.
+			</p>
+			<div class="buttons">
+				<a href="login.html" class="btn primary">시작하기</a>
+				<a href="#" class="btn secondary">자세히 보기</a>
+			</div>
+		</section>
+	</main>
+</body>
+</html>

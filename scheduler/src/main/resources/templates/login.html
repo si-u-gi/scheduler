@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Schedular - Login</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: Inter, Pretendard, sans-serif;
+		}
+
+		body {
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			padding-top: 90px;
+			background: #0D1117;
+			color: #F0F6FC;
+			overflow: hidden;
+		}
+
+		.background-circle {
+			position: absolute;
+			border-radius: 50%;
+			filter: blur(100px);
+		}
+
+		.circle-blue {
+			width: 500px;
+			height: 500px;
+			background: #2563EB;
+			opacity: .25;
+			top: -200px;
+			left: -200px;
+		}
+
+		.circle-purple {
+			width: 450px;
+			height: 450px;
+			background: #7C3AED;
+			opacity: .18;
+			bottom: -200px;
+			right: -150px;
+		}
+
+		.logo {
+			position: absolute;
+			top: 30px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			align-items: center;
+			gap: 14px;
+			font-size: 40px;
+			font-weight: 800;
+			color: #3B82F6;
+		}
+
+		.logo-dot {
+			width: 22px;
+			height: 22px;
+			border-radius: 50%;
+			background: #3B82F6;
+			box-shadow: 0 0 12px #3B82F6, 0 0 30px #3B82F6;
+		}
+
+		.container {
+			width: 500px;
+			padding: 50px;
+			background: #161B22;
+			border: 1px solid #30363D;
+			border-radius: 22px;
+			box-shadow: 0 20px 60px rgba(0, 0, 0, .5);
+			position: relative;
+			z-index: 10;
+		}
+
+		.tabs {
+			display: flex;
+			background: #0D1117;
+			border-radius: 12px;
+			padding: 5px;
+			margin-bottom: 30px;
+		}
+
+		.tab {
+			flex: 1;
+			padding: 12px;
+			border: none;
+			background: transparent;
+			color: #8B949E;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+
+		.tab.active {
+			background: #3B82F6;
+			color: #fff;
+		}
+
+		.form-box {
+			display: none;
+			animation: fade .3s;
+		}
+
+		.form-box.active {
+			display: block;
+		}
+
+		@keyframes fade {
+			from {
+				opacity: 0;
+				transform: translateY(10px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+	    .input-box {
+			margin-bottom: 18px;
+		}
+
+		.input-box label {
+			display: block;
+			margin-bottom: 8px;
+			color: #C9D1D9;
+		}
+
+		.input-box input {
+			width: 100%;
+			padding: 16px;
+			background: #0D1117;
+			color: #fff;
+			border: 1px solid #30363D;
+			border-radius: 10px;
+			font-size: 16px;
+		}
+
+		.input-box input:focus {
+			outline: none;
+			border-color: #3B82F6;
+			box-shadow: 0 0 10px rgba(59, 130, 246, .3);
+		}
+
+		.submit-btn {
+			width: 100%;
+			padding: 17px;
+			border: none;
+			border-radius: 10px;
+			background: #3B82F6;
+			color: #fff;
+			font-size: 17px;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		.bottom-text {
+			text-align: center;
+			margin-top: 22px;
+			color: #8B949E;
+		}
+
+		.bottom-text span {
+			color: #3B82F6;
+			cursor: pointer;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<div class="background-circle circle-blue"></div>
+	<div class="background-circle circle-purple"></div>
+
+	<div class="logo">
+		<div class="logo-dot"></div>
+		Schedular
+	</div>
+
+	<div class="container">
+		<div class="tabs">
+			<button class="tab active" onclick="location.href='login.html'">로그인</button>
+			<button class="tab" onclick="location.href='signup.html'">회원가입</button>
+		</div>
+
+		<div id="loginForm" class="form-box active">
+			<div class="input-box"><label>아이디</label><input type="text" placeholder="아이디"></div>
+			<div class="input-box"><label>비밀번호</label><input type="password" placeholder="비밀번호"></div>
+			<button class="submit-btn">로그인</button>
+			<div class="bottom-text">계정이 없으신가요? <span onclick="location.href='signup.html'">회원가입</span></div>
+		</div>
+
+		<div id="signupForm" class="form-box">
+			<div class="input-box"><label>이름</label><input type="text"></div>
+			<div class="input-box"><label>아이디</label><input type="text"></div>
+			<div class="input-box"><label>이메일</label><input type="email"></div>
+			<div class="input-box"><label>비밀번호</label><input type="password"></div>
+			<div class="input-box"><label>비밀번호 확인</label><input type="password"></div>
+			<button class="submit-btn">회원가입</button>
+			<div class="bottom-text">이미 계정이 있으신가요? <span onclick="showLogin()">로그인</span></div>
+		</div>
+	</div>
+</body>
+</html>

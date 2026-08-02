@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Schedular - 회원가입</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: Inter, Pretendard, sans-serif;
+		}
+
+		body {
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			padding-top: 90px;
+			background: #0D1117;
+			color: #F0F6FC;
+			overflow: hidden;
+		}
+
+		.background-circle {
+			position: absolute;
+			border-radius: 50%;
+			filter: blur(100px);
+		}
+
+		.circle-blue {
+			width: 500px;
+			height: 500px;
+			background: #2563EB;
+			opacity: .25;
+			top: -200px;
+			left: -200px;
+		}
+
+		.circle-purple {
+			width: 450px;
+			height: 450px;
+			background: #7C3AED;
+			opacity: .18;
+			bottom: -200px;
+			right: -150px;
+		}
+
+		.logo {
+			position: absolute;
+			top: 30px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			align-items: center;
+			gap: 14px;
+			font-size: 40px;
+			font-weight: 800;
+			color: #3B82F6;
+		}
+
+		.logo-dot {
+			width: 22px;
+			height: 22px;
+			border-radius: 50%;
+			background: #3B82F6;
+			box-shadow: 0 0 12px #3B82F6, 0 0 30px #3B82F6;
+		}
+
+		.container {
+			width: 760px;
+			background: #161B22;
+			border: 1px solid #30363D;
+			border-radius: 22px;
+			padding: 50px;
+			position: relative;
+			z-index: 10;
+			box-shadow: 0 20px 60px rgba(0, 0, 0, .5);
+		}
+
+		h1 {
+			text-align: center;
+			margin-bottom: 8px;
+		}
+
+		.description {
+			text-align: center;
+			color: #8B949E;
+			margin-bottom: 30px;
+		}
+
+		.row {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 18px;
+		}
+
+		.input-box {
+			margin-bottom: 18px;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 8px;
+			color: #C9D1D9;
+		}
+
+		input,
+		select {
+			width: 100%;
+			padding: 16px;
+			background: #0D1117;
+			border: 1px solid #30363D;
+			border-radius: 10px;
+			color: #fff;
+		}
+
+		input:focus,
+		select:focus {
+			outline: none;
+			border-color: #3B82F6;
+		}
+
+		.agree {
+			margin: 18px 0;
+		}
+
+		.submit-btn {
+			width: 100%;
+			padding: 17px;
+			border: none;
+			border-radius: 10px;
+			background: #3B82F6;
+			color: #fff;
+			font-size: 17px;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		.bottom-text {
+			text-align: center;
+			margin-top: 20px;
+			color: #8B949E;
+		}
+
+		.bottom-text a {
+			color: #3B82F6;
+			text-decoration: none;
+		}
+
+		input[type="date"] {
+			appearance: none;
+			-webkit-appearance: none;
+			min-height: 52px;
+		}
+
+		@media (max-width: 800px) {
+			.container {
+				width: 92%;
+			}
+
+			.row {
+				grid-template-columns: 1fr;
+			}
+		}
+        .tabs {
+			display: flex;
+			background: #0D1117;
+			border-radius: 12px;
+			padding: 5px;
+			margin-bottom: 30px;
+		}
+
+		.tab {
+			flex: 1;
+			padding: 12px;
+			border: none;
+			background: transparent;
+			color: #8B949E;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+
+		.tab.active {
+			background: #3B82F6;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="background-circle circle-blue"></div>
+	<div class="background-circle circle-purple"></div>
+
+	<div class="logo">
+		<div class="logo-dot"></div>
+		Schedular
+	</div>
+
+	<div class="container">
+		<div class="tabs">
+			<button class="tab" onclick="location.href='login.html'">로그인</button>
+			<button class="tab active" onclick="location.href='signup.html'">회원가입</button>
+		</div>
+
+		<div class="row">
+			<div class="input-box"><label>이름</label><input placeholder="이름"></div>
+			<div class="input-box"><label>아이디</label><input placeholder="아이디"></div>
+		</div>
+
+		<div class="row">
+			<div class="input-box"><label>이메일</label><input type="email" placeholder="email@example.com"></div>
+			<div class="input-box"><label>전화번호</label><input placeholder="010-1234-5678"></div>
+		</div>
+
+		<div class="row">
+			<div class="input-box"><label>비밀번호</label><input type="password"></div>
+			<div class="input-box"><label>비밀번호 확인</label><input type="password"></div>
+		</div>
+
+		<div class="row">
+			<div class="input-box">
+				<label>성별</label>
+				<select>
+					<option>선택 안 함</option>
+					<option>남성</option>
+					<option>여성</option>
+				</select>
+			</div>
+			<div class="input-box"><label>생년월일</label><input type="date"></div>
+		</div>
+
+		<div class="agree">
+			<label><input type="checkbox" style="width:auto;margin-right:8px">이용약관 및 개인정보 처리방침에 동의합니다.</label>
+		</div>
+
+		<button class="submit-btn">회원가입</button>
+
+		<div class="bottom-text">이미 계정이 있으신가요? <a href="login.html">로그인</a></div>
+	</div>
+</body>
+</html>
