@@ -199,44 +199,79 @@
 
 	<div class="container">
 		<div class="tabs">
-			<button class="tab" onclick="location.href='login.html'">로그인</button>
-			<button class="tab active" onclick="location.href='signup.html'">회원가입</button>
+			<button class="tab" type="button" onclick="location.href='login.html'">로그인</button>
+			<button class="tab active" type="button" onclick="location.href='signup.html'">회원가입</button>
 		</div>
 
-		<div class="row">
-			<div class="input-box"><label>이름</label><input placeholder="이름"></div>
-			<div class="input-box"><label>아이디</label><input placeholder="아이디"></div>
-		</div>
+		<form action="/signup" method="post">
 
-		<div class="row">
-			<div class="input-box"><label>이메일</label><input type="email" placeholder="email@example.com"></div>
-			<div class="input-box"><label>전화번호</label><input placeholder="010-1234-5678"></div>
-		</div>
+			<div class="row">
+				<div class="input-box">
+					<label>이름</label>
+					<input type="text" name="name" placeholder="이름">
+				</div>
 
-		<div class="row">
-			<div class="input-box"><label>비밀번호</label><input type="password"></div>
-			<div class="input-box"><label>비밀번호 확인</label><input type="password"></div>
-		</div>
-
-		<div class="row">
-			<div class="input-box">
-				<label>성별</label>
-				<select>
-					<option>선택 안 함</option>
-					<option>남성</option>
-					<option>여성</option>
-				</select>
+				<div class="input-box">
+					<label>아이디</label>
+					<input type="text" name="username" placeholder="아이디">
+				</div>
 			</div>
-			<div class="input-box"><label>생년월일</label><input type="date"></div>
+
+			<div class="row">
+				<div class="input-box">
+					<label>이메일</label>
+					<input type="email" name="email" placeholder="email@example.com">
+				</div>
+
+				<div class="input-box">
+					<label>전화번호</label>
+					<input type="tel" name="phone" placeholder="010-1234-5678">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-box">
+					<label>비밀번호</label>
+					<input type="password" name="password">
+				</div>
+
+				<div class="input-box">
+					<label>비밀번호 확인</label>
+					<input type="password" name="ConfirmPassword">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-box">
+					<label>성별</label>
+					<select name="gender">
+					<option value="">선택 안 함</option>
+					<option value="MALE">남성</option>
+					<option value="FEMALE">여성</option>
+					</select>
+				</div>
+
+				<div class="input-box">
+					<label>생년월일</label>
+					<input type="date" name="birthDate">
+				</div>
+			</div>
+
+			<div class="agree">
+				<label>
+					<input type="checkbox" name="agree" style="width:auto;margin-right:8px">
+					이용약관 및 개인정보 처리방침에 동의합니다.
+				</label>
+			</div>
+
+			<button type="submit" class="submit-btn">회원가입</button>
+
+		</form>
+
+		<div class="bottom-text">
+			이미 계정이 있으신가요?
+			<a href="login.html">로그인</a>
 		</div>
-
-		<div class="agree">
-			<label><input type="checkbox" style="width:auto;margin-right:8px">이용약관 및 개인정보 처리방침에 동의합니다.</label>
-		</div>
-
-		<button class="submit-btn">회원가입</button>
-
-		<div class="bottom-text">이미 계정이 있으신가요? <a href="login.html">로그인</a></div>
 	</div>
 </body>
 </html>
