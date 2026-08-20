@@ -204,6 +204,11 @@
 		</div>
 
 		<form action="/signup" method="post">
+			<input
+				type="hidden"
+				th:name="${_csrf.parameterName}"
+				th:value="${_csrf.token}"
+			>
 
 			<div class="row">
 				<div class="input-box">

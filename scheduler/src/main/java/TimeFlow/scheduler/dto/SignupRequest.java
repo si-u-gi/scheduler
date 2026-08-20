@@ -9,7 +9,7 @@ public class SignupRequest {
     private String phone;
     private String password;
     private String confirmPassword;
-    private Character gender; // M, F
+    private String gender; // M, F
     private LocalDate birthDate;
 
     public String getName() {
@@ -60,11 +60,11 @@ public class SignupRequest {
         this.confirmPassword = confirmPassword;
     }
 
-    public Character getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(Character gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 

@@ -1,0 +1,32 @@
+Electron + React
+→ 로그인 화면
+→ 회원가입 화면
+→ 채팅 화면
+
+Spring Boot
+→ 회원가입 API
+→ 로그인 API
+→ 사용자 API
+→ 친구 API
+→ 채팅 API
+
+WebSocket
+→ 실시간 메시지
+→ 온라인 상태
+→ 타이핑 상태
+
+DB
+→ 사용자
+→ 채팅방
+→ 메시지
+
+Electron + React
+      ↓
+WebSocket / REST API
+      ↓
+Spring Boot
+      ↓
+PostgreSQL / Redis 등
+
+그래서 React + Spring으로 정상 작동하는 서비스를 먼저 만들고 → Electron으로 데스크톱 앱화 → 실시간 기능이 필요한 곳에 WebSocket 추가라고 이해하면 됩니다.
+이 구조를 사용하면 웹 버전과 데스크톱 버전을 React 코드 상당 부분을 공유하면서 동시에 제공하는 것도 가능합니다.

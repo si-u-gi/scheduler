@@ -1,5 +1,7 @@
 package TimeFlow.scheduler.repository;
 
+import java.util.Optional;
+
 import TimeFlow.scheduler.entity.User;
 import jakarta.persistence.EntityManager;
 
@@ -32,5 +34,15 @@ public class JpaUserRepository implements UserRepository {
     public User save(User user) {
         em.persist(user);
         return user;
+    }
+
+    @Override
+    public Optional<User> findByUsername(String username) {
+        String query = "SELECT u FROM User u WHERE u.username = :username";
+        return em.createQuery(query, User.class)
+                .setParameter("username", username)
+                .getResultList()
+                .stream()
+                .findFirst();
     }
 }

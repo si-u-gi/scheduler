@@ -115,11 +115,11 @@ Week  9-10 │████████████████████│ Ph
 #### **Week 1-2: 인증 시스템**
 - [✔️] Spring Boot 프로젝트 생성
 - [✔️] PostgreSQL 연결 설정
-- [ ] JPA Entity 설계 (User, RefreshToken)
-- [ ] 회원가입 API + Validation
-- [ ] 로그인 API + BCrypt
+- [✔️] JPA Entity 설계 (User, RefreshToken)
+- [✔️] 회원가입 API + Validation
+- [✔️] 로그인 API + BCrypt
 - [ ] JWT Access/Refresh Token 구현
-- [ ] Security Config 설정
+- [✔️] Security Config 설정
 - [ ] API 문서화 (Swagger) 설정
 
 #### **Week 3-4: 크루 관리**

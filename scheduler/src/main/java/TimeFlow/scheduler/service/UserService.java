@@ -1,17 +1,22 @@
 package TimeFlow.scheduler.service;
 
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import TimeFlow.scheduler.dto.SignupRequest;
 import TimeFlow.scheduler.entity.User;
 import TimeFlow.scheduler.repository.UserRepository;
+import jakarta.transaction.Transactional;
 
 @Service
+@Transactional
 public class UserService {
     private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
-    public UserService(UserRepository userRepository) {
+    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
     public boolean isUsernameTaken(String username) {
@@ -38,7 +43,7 @@ public class UserService {
         user.setUsername(request.getUsername());
         user.setEmail(request.getEmail());
         user.setPhone(request.getPhone());
-        user.setPassword(request.getPassword());
+        user.setPassword(passwordEncoder.encode(request.getPassword()));
         user.setGender(request.getGender());
         user.setBirthDate(request.getBirthDate());
         userRepository.save(user);

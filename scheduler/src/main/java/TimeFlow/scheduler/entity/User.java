@@ -18,7 +18,7 @@ public class User {
     private String email;
     private String phone;
     private String password;
-    private Character gender; // M, F
+    private String gender; // M, F
     private LocalDate birthDate;
 
     public Long getUserId() {
@@ -69,11 +69,11 @@ public class User {
         this.password = password;
     }
 
-    public Character getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(Character gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
